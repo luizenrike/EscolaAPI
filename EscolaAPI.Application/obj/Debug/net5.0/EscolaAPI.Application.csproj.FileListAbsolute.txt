@@ -1,0 +1,17 @@
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Application.deps.json
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Application.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Application.pdb
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.csproj.AssemblyReference.cache
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.AssemblyInfoInputs.cache
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.AssemblyInfo.cs
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\refint\EscolaAPI.Application.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.pdb
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\ref\EscolaAPI.Application.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Domain.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Infra.dll
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Infra.pdb
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\bin\Debug\net5.0\EscolaAPI.Domain.pdb
+C:\Users\luizh\OneDrive\Documentos\Github\C#\EscolaAPI\EscolaAPI.Application\obj\Debug\net5.0\EscolaAPI.Application.csproj.CopyComplete

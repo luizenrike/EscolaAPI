@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EscolaAPI.Application\**" />
+    <Compile Remove="EscolaAPI.Domain\**" />
+    <Compile Remove="EscolaAPI.Infra\**" />
+    <Compile Remove="EscolaAPI.Testes\**" />
+    <Content Remove="EscolaAPI.Application\**" />
+    <Content Remove="EscolaAPI.Domain\**" />
+    <Content Remove="EscolaAPI.Infra\**" />
+    <Content Remove="EscolaAPI.Testes\**" />
+    <EmbeddedResource Remove="EscolaAPI.Application\**" />
+    <EmbeddedResource Remove="EscolaAPI.Domain\**" />
+    <EmbeddedResource Remove="EscolaAPI.Infra\**" />
+    <EmbeddedResource Remove="EscolaAPI.Testes\**" />
+    <None Remove="EscolaAPI.Application\**" />
+    <None Remove="EscolaAPI.Domain\**" />
+    <None Remove="EscolaAPI.Infra\**" />
+    <None Remove="EscolaAPI.Testes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="EscolaAPI.Application\EscolaAPI.Application.csproj" />
+    <ProjectReference Include="EscolaAPI.Infra\EscolaAPI.Infra.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

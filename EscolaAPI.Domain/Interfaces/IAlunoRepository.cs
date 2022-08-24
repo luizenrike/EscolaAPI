@@ -9,6 +9,6 @@ namespace EscolaAPI.Domain.Interfaces
 {
     public interface IAlunoRepository : IBaseRepository <Aluno>
     {
-       
+        new Aluno GetById(int Id);
     }
 }

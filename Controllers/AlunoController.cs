@@ -24,7 +24,7 @@ namespace EscolaAPI.Controllers
 
         [HttpGet("{Id}")]
         [Authorize]
-        public Aluno GetById(int Id) => _Service.GetById(Id);
+        public AlunoDTO GetById(int Id) => _Service.GetById(Id);
 
         [HttpPost]
         [Authorize]

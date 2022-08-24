@@ -35,7 +35,7 @@ namespace EscolaAPI.Application.Services
 
         public TurmaDTO GetById(int Id)
         {
-            Turma Turma = _Repositorio.GetById_2(Id);
+            Turma Turma = _Repositorio.GetById(Id);
             TurmaDTO DTO = _Mapper.Map<TurmaDTO>(Turma);
 
 

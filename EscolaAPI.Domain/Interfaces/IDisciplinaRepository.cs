@@ -10,8 +10,7 @@ namespace EscolaAPI.Domain.Interfaces
     public interface IDisciplinaRepository : IBaseRepository<Disciplina>
     {
         Disciplina GetByName(string nome);
-
-        Disciplina GetById_2(int Id);
+        new Disciplina GetById(int Id);
 
     }
 }

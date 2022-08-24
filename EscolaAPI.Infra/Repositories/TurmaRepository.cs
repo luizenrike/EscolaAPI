@@ -22,7 +22,7 @@ namespace EscolaAPI.Infra.Repositories
             return Database.Turmas.Where(t => t.Nome.ToLower() == Nome.ToLower()).FirstOrDefault();
         }
 
-        public Turma GetById_2(int Id)
+        public new Turma GetById(int Id)
         {
             return Database.Turmas
                 .Include(t => t.Alunos)

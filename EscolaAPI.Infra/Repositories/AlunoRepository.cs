@@ -22,5 +22,10 @@ namespace EscolaAPI.Infra.Repositories
             return Database.Alunos.Include(a => a.Turma).ToList();
         }
 
+        public new Aluno GetById(int Id)
+        {
+            return Database.Alunos.Include(a => a.Turma).Where(a => a.Id == Id).FirstOrDefault();
+        }
+
     }
 }

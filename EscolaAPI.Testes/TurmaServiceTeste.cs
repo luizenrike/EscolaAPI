@@ -74,7 +74,7 @@ namespace EscolaAPI.Testes
             T.Alunos = null;
 
             _Repositorio
-                .Setup(x => x.GetById_2(It.IsAny<int>())).Returns(T);
+                .Setup(x => x.GetById(It.IsAny<int>())).Returns(T);
 
             // atuação
             TurmaDTO Retorno = _Sut.GetById(1);
@@ -84,7 +84,103 @@ namespace EscolaAPI.Testes
             
             Assert.Equal("primeira", Retorno.Nome);
             _Repositorio
-                .Verify(x => x.GetById_2(1), Times.Once());
+                .Verify(x => x.GetById(1), Times.Once());
+        }
+
+        [Fact]
+        public void TestePost_Turma()
+        {
+            // preparação
+            CriarTurmaDTO NovaTurma = new CriarTurmaDTO();
+            Disciplina Disc = new Disciplina();
+            Professor Prof = new Professor();
+            Disc.Id = 1;
+            Disc.Nome = "filosofia";
+
+            Prof.Id = 1;
+            Prof.Nome = "alvaro";
+
+
+            NovaTurma.Nome = "primeira";
+            NovaTurma.Disciplina = "filosofia";
+            NovaTurma.Professor = "alvaro";
+
+            _RepositorioDisciplina
+                .Setup(x => x.GetByName(It.IsAny<string>())).Returns(Disc);
+
+            _RepositorioProfessor
+                .Setup(x => x.GetByName(It.IsAny<string>())).Returns(Prof);
+
+            // atuação
+            _Sut.PostTurma(NovaTurma);
+
+            // verificação
+            _Repositorio
+                .Verify(x => x.Insert(It.Is<Turma>(t => t.Nome == NovaTurma.Nome)), Times.Once());
+        }
+
+        [Fact]
+        public void TestePut_Turma()
+        {
+            // preparação
+            CriarTurmaDTO T = new CriarTurmaDTO();
+            Disciplina Disc = new Disciplina();
+            Professor Prof = new Professor();
+            Turma Att = new Turma();
+
+            Att.Id = 1;
+            Att.Nome = "primeira";
+            Att.Disciplina = Disc;
+            Att.Professor = Prof;
+
+
+            Disc.Id = 1;
+            Disc.Nome = "geografia";
+
+            Prof.Id = 1;
+            Prof.Nome = "carlos";
+
+
+            T.Nome = "primeira";
+            T.Disciplina = "matematica";
+            T.Professor = "joao";
+
+            _Repositorio
+                .Setup(x => x.GetById(It.IsAny<int>())).Returns(Att);
+
+            _RepositorioDisciplina
+                .Setup(x => x.GetByName(It.IsAny<string>())).Returns(Disc);
+
+            _RepositorioProfessor
+                .Setup(x => x.GetByName(It.IsAny<string>())).Returns(Prof);
+
+            // atuação
+            _Sut.PutTurma(T, 1);
+
+            // verificação
+            _Repositorio
+                .Verify(x => x.Update(Att), Times.Once());
+
+        }
+
+        [Fact]
+        public void TesteDelete_Turma()
+        {
+            // preparação
+            Turma T = new Turma();
+            T.Id = 1;
+            T.Nome = "primeira";
+
+            _Repositorio
+                .Setup(x => x.GetById(It.IsAny<int>())).Returns(T);
+
+
+            // atuação
+            _Sut.DeleteTurma(T.Id);
+
+            // verificação
+            _Repositorio
+                .Verify(x => x.Delete(T), Times.Once());
         }
         
     }

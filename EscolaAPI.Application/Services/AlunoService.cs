@@ -29,9 +29,12 @@ namespace EscolaAPI.Application.Services
             return Retorno;
         }
 
-        public Aluno GetById(int Id)
+        public AlunoDTO GetById(int Id)
         {
-            return _Repositorio.GetById(Id);
+            Aluno aluno =  _Repositorio.GetById(Id);
+            AlunoDTO Retorno = _Mapper.Map<AlunoDTO>(aluno);
+            return Retorno;
+
         }
 
         public void PostAluno(CriarAlunoDTO InfoAluno)

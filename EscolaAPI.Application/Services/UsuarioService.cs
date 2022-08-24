@@ -25,10 +25,6 @@ namespace EscolaAPI.Application.Services
         }
         
 
-        //public List<Usuario> GetAll() => _Repositorio.GetAll();
-
-        //public Usuario GetById(int Id) => _Repositorio.GetById(Id);
-
         public Usuario GetLogin(string Nome, string Senha) => _Repositorio.GetLogin(Nome, Senha);
 
         public void PostUsuario(CriarUsuarioDTO InfoUsuario)

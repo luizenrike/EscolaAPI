@@ -30,7 +30,7 @@ namespace EscolaAPI.Application.Services
 
         public DisciplinaDTO GetById(int Id)
         {
-            Disciplina Disc = _Repositorio.GetById_2(Id);
+            Disciplina Disc = _Repositorio.GetById(Id);
             DisciplinaDTO DTO = _Mapper.Map <DisciplinaDTO> (Disc);
 
             return DTO;

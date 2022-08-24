@@ -22,7 +22,7 @@ namespace EscolaAPI.Infra.Repositories
             return Database.Disciplinas.Where(d => d.Nome.ToLower() == Nome.ToLower()).FirstOrDefault();
         }
 
-        public Disciplina GetById_2(int Id)
+        public new Disciplina GetById(int Id)
         {
             return Database.Disciplinas
                 .Include(d => d.ListaTurmas)

@@ -76,7 +76,30 @@ namespace EscolaAPI.Testes
             // verificação
             Assert.NotNull(Retorno);
             Assert.Equal("Mario", Retorno.Nome);
+            _Repositorio
+                .Verify(x => x.GetByName("teste"), Times.Once());
 
+        }
+
+        [Fact]
+        public void TesteGetById_Professor()
+        {
+            // preparação
+            Professor Prof = new Professor();
+            Prof.Id = 1;
+            Prof.Nome = "Marcelo";
+
+            _Repositorio
+                .Setup(x => x.GetById(It.IsAny<int>())).Returns(Prof);
+
+            // atuação
+            ProfessorDTO Retorno = _Sut.GetById(1);
+
+            // verificação
+            Assert.NotNull(Retorno);
+            Assert.Equal("Marcelo", Retorno.Nome);
+            _Repositorio
+                .Verify(x => x.GetById(1), Times.Once());
         }
 
         [Fact]
